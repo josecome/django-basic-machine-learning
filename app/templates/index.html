@@ -1,0 +1,23 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Index</title>  
+    {% load static %}  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
+</head>  
+<body> 
+<h1>Basic Machine Learning with IRIS Dataset</h1> 
+<form action="/" method="POST">
+{% csrf_token %}
+<table>
+<tr><td>sepal_length:</td><td><input type="number" step="0.1" name="v1" id="v1"></td></tr>
+<tr><td>sepal_width:</td><td><input type="number" step="0.1" name="v2" id="v2"></td></tr>
+<tr><td>petal_length:</td><td><input type="number" step="0.1" name="v3" id="v3"></td></tr>
+<tr><td>petal_width:</td><td><input type="number" step="0.1" name="v4" id="v4"></td></tr>
+</table><br>
+	<button type="submit">Submit</button><br>
+	<br>Result: <strong>{{rslt}}</strong>    
+</form>
+</body>  
+</html>  
